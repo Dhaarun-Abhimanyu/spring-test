@@ -16,12 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @ComponentScan
 @Controller
 @SpringBootApplication
-@RestController
 public class TodolistApplication {
 
 	@RequestMapping("/")
 	public String home() {
-		return "Hello nigga";
+		return "index";
 	}
 
 	public static void main(String[] args) {
