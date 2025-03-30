@@ -7,8 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 
 @Configuration
@@ -19,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TodolistApplication {
 
 	@RequestMapping("/")
-	public String home() {
-		return "index";
+  public String home() {
+    return "index";
 	}
-
+  
 	public static void main(String[] args) {
 		SpringApplication.run(TodolistApplication.class, args);
-	}
+  }
 
 }
