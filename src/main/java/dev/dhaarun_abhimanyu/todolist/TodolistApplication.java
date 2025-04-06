@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-@Controller
 @SpringBootApplication
+@Controller
 public class TodolistApplication {
 
 	@RequestMapping("/")
   public String home() {
     return "index";
-	}
-  
+	}  
+
 	public static void main(String[] args) {
 		SpringApplication.run(TodolistApplication.class, args);
   }
