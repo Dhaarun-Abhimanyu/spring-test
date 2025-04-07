@@ -8,6 +8,7 @@ Trying spring applications for fun!
    1. [Maven vs Gradle](#mvn_gdl)
    2. [Spring and Spring boot](#spr_spb)
 2. [Important Commands](#imp_cmd)
+3. [Annotations](#ann)
 
 ## Quick Notes
 
@@ -34,6 +35,8 @@ Spring is the actual framework(framework being a skeleton on vanilla java, that 
 
 Spring boot is like a tool built on top of the spring framework that saves a lot of time and boilerplate - it provides auto configuration, embedded servers(like **tomcat**, **jetty** and **undertow**) and some production ready features(imo, it seems like `npx create-react-app` that comes in with some ready to use code)
 
+<a id = "spr_spb" ></a>
+
 #### Spring App layers
 ##### Presentation
 Contains the controllers that interact with the client
@@ -52,7 +55,8 @@ Check out [this](https://github.com/devtiro/course-spring-boot/tree/main/4_depen
 
 In short, no need to change the code in case of change of dependencies(Spring automatically handles dependency injection)
 
-<a id = "spr_spb" ></a>
+#### Dependency injection / Auto wiring:
+Spring automatically 'scans' the project for beans(one can call this **component scanning**). If the bean requires dependencies, spring then searches its context to check if it has those dependencies(or ig beans here). If it does, it then "injects" those beans here, hence known as dependency injection. "Auto wiring" means the same thing, its just a term that refers to dependency injection specifically in spring.
 
 ## Important Commands
 
@@ -61,4 +65,14 @@ In short, no need to change the code in case of change of dependencies(Spring au
 3. `./mvnw dependency:tree` - for viewing the dependency tree
 
 <a id="imp_cmd"></a>
+
+## Annotations
+
+- `@Configuration` : config files for the project. Spring will check for any required configuration from these(say any beans to be loaded)
+- `@Bean` : For declaring a bean(method returns an object)
+- `@SpringBootApplication` : Main spring file ig
+- `@Controller` : to define a class as a controller
+- `@Value` : to get a value from 'application.properties'
+- `@Component` : for now, ik its an annotation to declare a class as a bean(similar to using @Bean in a method in an @Configuration class)
+
 
